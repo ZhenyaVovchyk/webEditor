@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+#container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#nameOut {
+    z-index: 10;
+    position: absolute;
+    top: 1%;
+    right: 1%;
+}
+
+#nameOut1 {
+    color: white;
+}
+
+#main {
+    text-align: center;
+}
+
+.btn {
+    color: #fff;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: bold;
+    font-size: medium;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    text-align: center;
+}
+
+#html {
+    position: absolute;
+    z-index: 11;
+    top: 14%;
+    left: 1%;
+}
+
+#css {
+    position: absolute;
+    z-index: 11;
+    top: 20%;
+    left: 1%;
+}
+
+#js {
+    position: absolute;
+    z-index: 11;
+    top: 26%;
+    left: 1%;
+}
+
+#change {
+    position: absolute;
+    top: 1%;
+    z-index: 10;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+    border: none;
+}
+
+#stopCanvas {
+    position: absolute;
+    z-index: 10;
+    top: 10%;
+    left: 1%;
+    width: 25px;
+}
+
+#settings {
+    z-index: 10;
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+    width: 25px;
+}
+
+#github {
+    z-index: 10;
+    position: absolute;
+    top: 5%;
+    left: 1%;
+}
+
+.txt {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+}
+
+#html-editor {
+    display: block;
+}
+
+#css-editor {
+    display: none;
+}
+
+#js-editor {
+    display: none;
+}
+
+#result {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    width: 40%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+}
+
+@media only screen and (max-width:800px) {
+    .txt {
+        position: absolute;
+        left: 10%;
+    }
+    #nameOut {
+        font-size: x-small;
+    }
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media only screen and (max-height: 600px) {
+    .txt {
+        position: absolute;
+        left: 8%;
+    }
+    #stopCanvas {
+        position: absolute;
+        top: 12%;
+    }
+    #html {
+        position: absolute;
+        top: 18%;
+    }
+    #css {
+        position: absolute;
+        top: 25%;
+    }
+    #js {
+        position: absolute;
+        top: 32%;
+    }
+}
