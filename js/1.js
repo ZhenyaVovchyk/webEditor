@@ -30,7 +30,10 @@ star.initStars(stars);
 window.addEventListener('load', () => { start() });
 window.addEventListener('dblclick', () => { cancelAnimationFrame(recAnimFrame) });
 let stop = document.getElementById('stopCanvas');
-stop.addEventListener('click', () => { cancelAnimationFrame(recAnimFrame) });
+stop.addEventListener('click', () => {
+    cancelAnimationFrame(recAnimFrame);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+});
 
 
 function start() {
@@ -47,5 +50,4 @@ function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     star.drawArcStroke(stars);
-
 }

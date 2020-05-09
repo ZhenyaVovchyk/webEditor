@@ -26,7 +26,7 @@
                 <option value="css-editor">css</option>
                 <option value="js-editor">js</option>
             </select>
-
+            <button title="result" class="btn" id="resBtn"><img width="50" height="50" src="./img/1.png" alt="result button"></button>
             <button title="html" class="btn" id="html"><img width="30" src="./icon/html.png" alt="html button"></button>
             <button title="css" class="btn" id="css"><img width="30" src="./icon/css.png" alt="css button"></button>
             <button title="js" class="btn" id="js"><img width="30" src="./icon/js.png" alt="js button"></button>
@@ -35,11 +35,12 @@
             <a class="btn" title="GitHub_New_repositories " id="github" href="https://github.com/new" target="_blanck"><img src="./icon/githubIcon.png" alt="github icon" width="25" height="25"></a>
         </div>
         <div id="all_editors">
-            <div class="txt" id="html-editor"></div>
-            <div class="txt" id="css-editor"></div>
-            <div class="txt" id="js-editor"></div>
-            <iframe id="result" frameborder="0"></iframe>
-            <!-- <iframe id="scale_result" frameborder="0">w</iframe> -->
+            <form>
+                <div class="txt" id="html-editor"></div>
+                <div class="txt" id="css-editor"></div>
+                <div class="txt" id="js-editor"></div>
+                <iframe class="txt res" id="result" frameborder="0"></iframe>
+            </form>
         </div>
     </div>
 </body>

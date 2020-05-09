@@ -28,8 +28,10 @@ jsEditor.getSession().on('change', function() {
     update();
 })
 
+let res;
+
 function update() {
-    let res = document.getElementById('result').contentWindow.document;
+    res = document.getElementById('result').contentWindow.document;
     res.open();
     res.write('<style>' + cssEditor.getValue() + '</style>');
     res.write('<script>' + jsEditor.getValue() + '</script>');
@@ -37,6 +39,13 @@ function update() {
     res.close();
 }
 update();
+
+function update2() {
+    res = document.getElementById('result').contentWindow.document;
+    res.window.open();
+    res.document.write(document.forms[0].elements[0].value);
+    res.close();
+}
 
 htmlEditor.addEventListener("input", () => {
     let htmlSave = htmlEditor.getValue();
@@ -91,16 +100,26 @@ $('#html').on('click', () => {
     $('#html-editor').css('display', 'block');
     $('#css-editor').css('display', 'none');
     $('#js-editor').css('display', 'none');
+    $('.result').css('display', 'none');
 });
 
 $('#css').on('click', () => {
     $('#html-editor').css('display', 'none');
     $('#css-editor').css('display', 'block');
     $('#js-editor').css('display', 'none');
+    $('.result').css('display', 'none');
 });
 
 $('#js').on('click', () => {
     $('#html-editor').css('display', 'none');
     $('#css-editor').css('display', 'none');
     $('#js-editor').css('display', 'block');
+    $('.result').css('display', 'none');
+});
+
+$('#resBtn').on('click', () => {
+    $('#html-editor').css('display', 'none');
+    $('#css-editor').css('display', 'none');
+    $('#js-editor').css('display', 'none');
+    $('.result').css('display', 'block');
 });

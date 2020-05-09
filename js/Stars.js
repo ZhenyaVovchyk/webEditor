@@ -43,19 +43,13 @@ class Stars {
 
             ctx.beginPath();
             ctx.strokeStyle = this.random();
-            //  ctx.arc(sx, sy, sr, 0, Math.PI * 2);
+            ctx.arc(sx, sy, sr, 0, Math.PI * 2);
             ctx.stroke();
+
+            ctx.fillStyle = this.random();
+            ctx.arc(sx, sy, sr, 0, Math.PI * 2);
+            ctx.fill();
+
         }
-    }
-}
-
-Stars.prototype.starImg = (img) => {
-    this.img = new Image();
-    this.img.src = img;
-    this.w = 50;
-    this.h = 50;
-
-    ddrawImage = () => {
-        ctx.drawImage(this.img, canvas.width / 2, canvas.height / 2, this.w, this.h);
     }
 }
